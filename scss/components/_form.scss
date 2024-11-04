@@ -1,0 +1,141 @@
+/* ----- Form ----- */
+input,
+textarea,
+select,
+.form-control {
+    outline: none;
+    box-shadow: none;
+    text-shadow: none;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+label {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: -0.4px;
+    margin-bottom: 5px;
+    color: $clr-18214d;
+}
+
+.form-control {
+    font-size: 1em;
+    line-height: 1.7;
+    padding: 10px 20px;
+    color: $clr-3d3a3a;
+    background-color: $white-clr;
+    border: 1px solid $no-clr;
+    border-radius: 8px;
+
+    @media (max-width: $break_767) {
+        padding: 8px 15px;
+    }
+    &:focus {
+        border-color: rgba($clr-0064fe, 0.5);
+    }
+    &::placeholder {
+        color: rgba($clr-18214d, 0.5);
+    }
+}
+
+/* ----- Checkboox ----- */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 24px;
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        border: 1px solid rgba($clr-89909c, 0.4);
+        border-radius: 6px;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 4px;
+            width: 6px;
+            height: 10px;
+            border: solid $white-clr;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: $clr-0064fe;
+            border-color: $clr-0064fe;
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+/* ----- Radio ----- */
+.custom-radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 24px;
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: $white-clr;
+        border: $border-137;
+        border-radius: 50%;
+        box-shadow: $shadow-1;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 5px;
+            left: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $white-clr;
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .checkmark {
+            &:after {
+                display: block;
+                background: $clr-0064fe;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+// Font
+$base-fz: 15px !default;
+$primary-ff: "Inter", sans-serif;
+
+// Color
+$no-clr: transparent;
+$white-clr: #ffffff;
+$black-clr: #000000;
+$clr-f8f8fb: #f8f8fb;
+$clr-3d3a3a: #3d3a3a;
+$clr-0064fe: #0064fe;
+$clr-eff5fe: #eff5fe;
+$clr-de3ce3: #de3ce3;
+$clr-fb77ff: #fb77ff;
+$clr-62c554: #62c554;
+$clr-7160ed: #7160ed;
+$clr-e3e6e8: #e3e6e8;
+$clr-89909c: #89909c;
+$clr-132239: #132239;
+$clr-acb2ba: #acb2ba;
+$clr-e42222: #e42222;
+$clr-5a6474: #5a6474;
+$clr-ffb000: #ffb000;
+$clr-18214d: #18214d;
+$clr-e3e3e3: #e3e3e3;
+$clr-f5f7fd: #f5f7fd;
+$clr-dfe4ea: #dfe4ea;
+$clr-3e4462: #3e4462;
+
+// Border
+$border-137: 1px solid rgba($clr-89909c, 0.2);
+
+// Shadow
+$shadow-1: 0px 2px 4px 1px rgba($black-clr, 0.05);
+
+// Media Queries
+$break_1440: 1440px;
+$break_1366: 1366px;
+$break_1280: 1280px;
+$break_1240: 1240px;
+$break_1080: 1080px;
+$break_1024: 1024px;
+$break_991: 991px;
+$break_850: 850px;
+$break_767: 767px;
+$break_768: 768px;
+$break_550: 550px;
+
+//@media (min-width: $break_767 + 1px) and (max-width: $break_1240) {}
+/*
+// --------------------------------
+@media (max-width: $break_550) {}
+*/

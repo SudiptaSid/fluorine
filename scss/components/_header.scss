@@ -1,0 +1,113 @@
+/* ----- Main Header ----- */
+#main-header {
+    display: block;
+    padding: 40px 0 10px 0;
+    position: relative;
+    z-index: 99;
+
+    @media (max-width: $break_767) {
+        padding: 20px 0 10px 0;
+    }
+    .left-menu {
+        .logo-div {
+            a {
+                display: inline-block;
+                img {
+                    @media (max-width: $break_767) {
+                        width: auto;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }
+    .right-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        #mm-open {
+            display: none;
+            border: none;
+            background: $no-clr;
+            padding: 0;
+            cursor: pointer;
+            width: 21px;
+            height: 21px;
+            line-height: 1;
+
+            @media (max-width: $break_767) {
+                display: inline-block;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            @media (max-width: $break_767) {
+                display: none;
+            }
+            li {
+                a {
+                    display: inline-block;
+                    color: $clr-3d3a3a;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    letter-spacing: 0.2px;
+                    svg {
+                        fill: $clr-3d3a3a;
+                    }
+                    &:hover {
+                        color: $clr-0064fe;
+                        svg {
+                            fill: $clr-0064fe;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ----- MM Menu ----- */
+#mm-menu {
+    background-color: $clr-132239;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    display: none;
+    &.active {
+        display: block;
+    }
+    ul {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        li {
+            a {
+                display: block;
+                font-size: 30px;
+                line-height: 36px;
+                font-weight: 600;
+                color: $white-clr;
+                &:hover {
+                    color: $clr-0064fe;
+                }
+            }
+        }
+    }
+}
